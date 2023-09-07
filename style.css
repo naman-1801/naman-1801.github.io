@@ -1,0 +1,283 @@
+/* Initializing margin padding for all elements */
+*{
+    margin:0;
+    padding: 0;
+}
+@font-face {
+    font-family: "Borel";
+    src: url("Borel/Borel-Regular.ttf");
+  }
+@font-face {
+    font-family: "Averia_Sans_Libre";
+    src: url("Averia_Sans_Libre/AveriaSansLibre-BoldItalic.ttf");
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+  html {
+    scroll-behavior: smooth;
+}
+
+/* body{
+    background-color: #cfd7a9;
+} */
+
+
+/* Navbar */
+#navbar {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0; /* Make it full-width */
+    height: 67px;
+    z-index: 100; /* Ensure it's above other content */
+}
+
+#navbar::before{
+    content:"";
+    background-color:rgb(199, 3, 3);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+#myname{
+    margin:5px;
+    padding:5px;
+    margin-left:25%;
+    font-family: 'Borel';
+    color: #e3200d;
+    font-style: oblique;
+    font-size: 2rem;
+}
+
+#navbar ul{
+    display:flex;
+    list-style: none;
+    margin-left:35%;
+}
+
+#navbar ul li a{
+    display: block; 
+    margin-right:7px;
+    padding:10px;
+    text-decoration: none;
+    color: #e3200d;
+    font-size: 2rem;
+    font-family: "Averia_Sans_Libre";
+
+}
+
+#navbar ul li a:hover{
+    display: block; 
+    margin-right:7px;
+    padding:10px;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+}
+
+/* Home */
+
+#home{
+    position: relative;
+    height: 925px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+#home h1{
+    font-weight: bold;
+    font-size: 8rem;
+    font-style: italic;
+    animation: color-change 4s ease-in infinite;
+}
+@keyframes color-change {
+    0%{
+
+        color: #4c0000;
+    }
+    50%{
+        color: #ff2dab;
+    }
+    100%{
+        
+        color: #4c0000;
+    }
+}
+#home::before{
+    content:"";
+    background: url("https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80") no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* About*/
+img{
+    height: 500px;
+    width:250px;
+    border: 2px dashed red;
+}
+#about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#about::before{
+    content:"";
+    background-color: #c70303;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#text-container{
+    display:block;
+    width:600px;
+    margin:10px;
+    font-size:1.5rem;
+    color: rgb(153, 11, 83);
+   font-family: 'Baloo 2', cursive;
+}
+
+#contact {
+    padding: 2rem;
+    position: relative;
+}
+#contact::before{
+    content:"";
+    background-color: #c70303;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+
+#contact h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.contact-item {
+    margin: auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 200px;
+}
+.contact-item a{
+    padding: 10px;
+    margin: 10px;
+}
+#social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-text{
+    font-size:1.5rem;
+    color: rgb(153, 11, 83);
+   font-family: 'Baloo 2', cursive;
+   margin-bottom: 5px;
+}
+
+.contact-item h3 {
+    font-size: 1.2rem;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 1rem;
+    width:95%;
+    margin: 1.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.contact-form h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+
+.contact-form input{
+    width:25%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.contact-form textarea {
+    width: 90%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.contact-form textarea {
+    resize: vertical; 
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+/* Utility classes */
+.heading_1{
+    font-weight: bold;
+    font-size: 4.5rem;
+    margin: 10px;
+    color: rgb(153, 11, 83);
+    text-align: center;
+
+}
+
+
+.center{
+    text-align: center;
+}
